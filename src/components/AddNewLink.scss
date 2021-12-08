@@ -1,0 +1,43 @@
+.add-new-link-container {
+  padding: 3rem;
+
+  &__title {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  &__back {
+    font-weight: bold;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+
+    }
+  }
+
+  &__input {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid;
+    margin-bottom: 1rem;
+  }
+
+  &__button {
+    background-color: black;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid;
+    margin-top: 2rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

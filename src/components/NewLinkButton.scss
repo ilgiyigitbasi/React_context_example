@@ -1,0 +1,25 @@
+.newLink {
+  padding: 1rem 4rem;
+  display: grid;
+  grid-template-columns: 15% 60%;
+  column-gap: 10%;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  &__button {
+    display: flex;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline:none;
+    line-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    height: 5.5rem;
+    width: 5.5rem;
+    &:hover {
+      background-color: rgba(236, 236, 236, 0.5);
+      cursor: pointer;
+    }
+  }
+}

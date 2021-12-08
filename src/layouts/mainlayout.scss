@@ -1,0 +1,25 @@
+.layout-body {
+  width: 100%;
+  background-color: #f6f6f6;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  min-height: calc(100vh - 7.6rem);
+  & > * {
+    max-width: 48rem;
+    margin-right: auto;
+    width: 100%;
+    margin-left: auto;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 100%;
+  }
+}
+
+.popup-background {
+  background-color: rgba(128, 128, 128, 0.6) !important;
+  z-index: 2;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+}
