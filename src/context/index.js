@@ -68,6 +68,9 @@ export const LinkProvider = (props) => {
     }
 
     function addNewLink(obj) {
+        if(localStorage.getItem('listStorageVoteList') === null) {
+            setListItems([])
+        }
         listItems.push(obj)
         setToasterMessage(obj.name + ' succesfully added')
         setShowToaster(true)

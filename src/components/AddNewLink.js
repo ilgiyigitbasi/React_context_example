@@ -5,8 +5,8 @@ import {ReactComponent as Back} from '../assets/arrow-left.svg'
 
 function AddNewLink(props) {
     const {addNewLink} = useContext(LinkContext)
-    const [linkName, setLinkName] = useState()
-    const [linkUrl, setLinkUrl] = useState()
+    const [linkName, setLinkName] = useState('')
+    const [linkUrl, setLinkUrl] = useState('')
 
     function add(e) {
         if (e.target.name === 'name') {

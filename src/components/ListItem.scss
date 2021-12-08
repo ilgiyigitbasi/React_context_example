@@ -48,7 +48,8 @@
 
   display: flex;
   align-items: center;
-  padding: 1rem;
+  padding: 0.50rem;
+  margin-top: 0.2rem;
   &:hover {
     background-color: lightgray;
     border-radius: 1rem;
@@ -64,6 +65,6 @@
 
   &__url {
     color: gray;
- margin-bottom: 0.25rem;
+    margin-top: 0.2rem;
   }
 }

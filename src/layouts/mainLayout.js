@@ -11,10 +11,13 @@ function MainLayout(props) {
     const {showDelete, setShowDelete, setListItems, listItems, showToaster, totalPage} = useContext(LinkContext)
     useEffect(() => {
         let listStorageVoteList = localStorage.getItem('listStorageVoteList')
-        if (listStorageVoteList !== '[]' && listItems?.length === 0) {
+        if (listStorageVoteList === null) {
+            localStorage.setItem('listStorageVoteList', '[]')
+            setListItems([])
+        }
+        if (listStorageVoteList !== null && JSON.parse(listStorageVoteList).length > 0 && listItems?.length === 0) {
+            console.log('here')
             setListItems(JSON.parse(listStorageVoteList))
-        } else if (listItems?.length === 0 && listStorageVoteList.length === 0) {
-
         }
 
     })
