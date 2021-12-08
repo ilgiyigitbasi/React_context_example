@@ -1,9 +1,10 @@
 .drop-down {
   padding: 1rem 2rem;
   &__select {
-    font-size: 1.2rem;
-    border-radius: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
     background-color: white;
     padding: 0.3rem;
+    border: 1px solid lightgray;
   }
 }

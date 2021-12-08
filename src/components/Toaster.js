@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import './Toaster.scss'
+import LinkContext from "../context";
+import {ReactComponent as Check} from "../assets/check-circle.svg";
 
 function Toaster(props) {
+    const {toasterMessage} = useContext(LinkContext)
     return (
 
         <div className={'toaster transition'}>
-            Successfully added!
+            {toasterMessage}
+            <Check style={{marginLeft: '0.2rem'}}/>
         </div>
 
     );

@@ -2,11 +2,15 @@
   position: fixed;
   border-radius: 1rem;
   padding: 2rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   left: calc(48% - 4rem);
   top: 3rem;
   background-color: #5cb85c;
   color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
   box-shadow: -1px 0px 45px -14px rgba(0, 0, 0, 0.59);
   -webkit-box-shadow: -1px 0px 45px -14px rgba(0, 0, 0, 0.59);
   -moz-box-shadow: -1px 0px 45px -14px rgba(0, 0, 0, 0.59);

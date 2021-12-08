@@ -9,6 +9,7 @@ export const LinkProvider = (props) => {
     const [pages, setPages] = useState('')
     const [deletingItem, setDeletingItem] = useState('')
     const [showToaster, setShowToaster] = useState(false)
+    const [toasterMessage, setToasterMessage] = useState('')
 
     function showDeletePopup(item, index) {
         setShowDelete(true)
@@ -32,9 +33,10 @@ export const LinkProvider = (props) => {
     function deleteItem(indexToDelete) {
         setListItems(listItems.filter((obj, index) => index !== indexToDelete))
         localStorage.setItem('listStorageVoteList', JSON.stringify(listItems.filter((obj, index) => index !== indexToDelete)))
-        setShowDelete(false)
         setShowToaster(true)
-        setTimeout(() => setShowToaster(false), 5000)
+         setShowDelete(false)
+        setToasterMessage('Successfully Deleted')
+        setTimeout(() => setShowToaster(false), 3000)
     }
 
     function upVote(indexToUpVote) {
@@ -67,8 +69,11 @@ export const LinkProvider = (props) => {
 
     function addNewLink(obj) {
         listItems.push(obj)
+        setToasterMessage(obj.name + ' succesfully added')
+        setShowToaster(true)
         setListItems(listItems)
         localStorage.setItem('listStorageVoteList', JSON.stringify(listItems))
+        setTimeout(() => setShowToaster(false), 3000)
     }
 
     const value = {
@@ -88,7 +93,8 @@ export const LinkProvider = (props) => {
         setListItems,
         setDeletingItem,
         deletingItem,
-        showToaster
+        showToaster,
+        toasterMessage
     }
     return <LinkContext.Provider value={value}>{props.children}</LinkContext.Provider>
 }
